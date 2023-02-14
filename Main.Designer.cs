@@ -40,8 +40,9 @@
             // 
             // panel1
             // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.gridContacts);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 148);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1098, 482);
@@ -49,8 +50,9 @@
             // 
             // gridContacts
             // 
+            this.gridContacts.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridContacts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridContacts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridContacts.Location = new System.Drawing.Point(0, 0);
             this.gridContacts.Name = "gridContacts";
             this.gridContacts.RowHeadersWidth = 51;
