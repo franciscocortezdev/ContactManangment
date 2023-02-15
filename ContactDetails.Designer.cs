@@ -85,7 +85,7 @@
             this.txtLastName.Multiline = true;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(303, 46);
-            this.txtLastName.TabIndex = 5;
+            this.txtLastName.TabIndex = 2;
             // 
             // label3
             // 
@@ -104,7 +104,7 @@
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(303, 46);
-            this.txtAddress.TabIndex = 7;
+            this.txtAddress.TabIndex = 4;
             // 
             // label4
             // 
@@ -122,9 +122,10 @@
             this.btnSave.Location = new System.Drawing.Point(220, 371);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(130, 49);
-            this.btnSave.TabIndex = 8;
+            this.btnSave.TabIndex = 5;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnCancel
             // 
@@ -132,9 +133,10 @@
             this.btnCancel.Location = new System.Drawing.Point(378, 371);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(130, 49);
-            this.btnCancel.TabIndex = 9;
+            this.btnCancel.TabIndex = 6;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ContactDetails
             // 
@@ -151,7 +153,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "ContactDetails";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContactDetails";
             this.ResumeLayout(false);
             this.PerformLayout();
