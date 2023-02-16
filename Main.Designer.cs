@@ -99,23 +99,24 @@
             this.txtSearch.Location = new System.Drawing.Point(158, 39);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(607, 45);
+            this.txtSearch.Size = new System.Drawing.Size(752, 45);
             this.txtSearch.TabIndex = 2;
             // 
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(801, 39);
+            this.btnSearch.Location = new System.Drawing.Point(952, 40);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(106, 46);
             this.btnSearch.TabIndex = 3;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(943, 39);
+            this.button1.Location = new System.Drawing.Point(1094, 40);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(106, 46);
             this.button1.TabIndex = 4;

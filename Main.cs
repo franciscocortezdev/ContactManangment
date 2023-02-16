@@ -13,7 +13,12 @@ namespace ContactManangment
     public partial class Main : Form
     {
         private BusinessLogicLayer _businessLogicLayer;
-
+        public List<Contact> listContacts;
+        enum OptionsGridView
+        {
+            Edit,
+            Delete
+        }
         public Main()
         {
             InitializeComponent();
@@ -40,7 +45,7 @@ namespace ContactManangment
 
         public void PopulateContacts()
         {
-            List<Contact> listContacts = _businessLogicLayer.GetContacts();
+            listContacts = _businessLogicLayer.GetContacts();
             gridContacts.DataSource = listContacts;
         }
 
@@ -48,7 +53,7 @@ namespace ContactManangment
         {
             DataGridViewButtonCell cell = (DataGridViewButtonCell)gridContacts.Rows[e.RowIndex].Cells[e.ColumnIndex];
 
-            if (cell.Value.ToString() == "Edit")
+            if (cell.Value.ToString() == OptionsGridView.Edit.ToString())
             {
                 ContactDetails ConDetails = new ContactDetails();
                 ConDetails.LoadContact(new Contact()
@@ -62,12 +67,25 @@ namespace ContactManangment
                 });
                 ConDetails.ShowDialog(this);
             }
-            else if(cell.Value.ToString() == "Delete")
+            else if(cell.Value.ToString() == OptionsGridView.Delete.ToString())
             {
                 int Id = (int)gridContacts.Rows[e.RowIndex].Cells[0].Value;
                 _businessLogicLayer.DeleteContact(Id);
                 PopulateContacts();
             }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            if(txtSearch.Text == string.Empty)
+            {
+                PopulateContacts();
+            }
+            var ContactsFiltred = listContacts.Where(c => c.FirstName.ToLower().Contains(txtSearch.Text.ToLower()) || c.LastName.ToLower().Contains(txtSearch.Text.ToLower()) || c.Phone.ToString().Contains(txtSearch.Text.ToLower()) || c.Address.ToLower().Contains(txtSearch.Text.ToLower())).ToList();
+
+            gridContacts.DataSource = ContactsFiltred;
+            txtSearch.Text = string.Empty;
+
         }
     }
 }
